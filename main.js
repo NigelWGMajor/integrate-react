@@ -1,14 +1,23 @@
 const { app, BrowserWindow } = require("electron");
 let win;
 function createWindow() {
-  win = new BrowserWindow({ width: 800, height: 600 });
+  win = new BrowserWindow({
+    transparent: true,
+    frame: false,
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
+
+  });
   
-  if (process.env.DEBUG) {
-     win.loadURL(`http://172.0.0.1:3000`);
-  }
-  
-  win.loadURL(`file://${__dirname}/build/index.html`);
-    
+  //if (process.env.DEBUG) {
+  //win.loadURL(`http://localhost:3000`);
+  //}
+  //else {
+    win.loadURL(`file://${__dirname}/build/index.html`);
+  //}
   win.on("closed", () => {
     win = null;
   });

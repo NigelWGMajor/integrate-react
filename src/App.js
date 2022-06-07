@@ -1,16 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
+import React from 'react'
 import { Navbar, Button, Alignment } from "@blueprintjs/core";
 
 function App() {
   return (
     <div className="App">
-        <Navbar className="bp3-dark">
+        <Navbar className="bp4-dark">
           <Navbar.Group align={Alignment.LEFT}>
-            <Navbar.Heading>Blueprint</Navbar.Heading>
+            <Navbar.Heading>Electron Snip</Navbar.Heading>
             <Navbar.Divider />
-            <Button className="bp3-minimal" icon="home" text="Home" />
-            <Button className="bp3-minimal" icon="document" text="Files" />
+            <Button className="bp3-minimal" icon="settings" text="Settings" />
+            <Button className="bp3-minimal" icon="help" text="About" />
           </Navbar.Group>
         </Navbar>
       <header className="App-header">
